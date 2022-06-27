@@ -1,0 +1,8 @@
+[0112/125956:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[0123/144014:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[0125/155433:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[0206/100612:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[0215/172357.846:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[0215/173735.089:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[0317/171529.849:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[0317/172150.193:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)

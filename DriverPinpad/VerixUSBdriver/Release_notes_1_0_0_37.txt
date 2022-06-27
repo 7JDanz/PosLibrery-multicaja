@@ -1,0 +1,100 @@
+VeriFone USB Driver 1.0.0
+Build 37.1, 3rd June 2013
+-------------------------
+
+This release supports :
+	Windows platforms : Win XP, Win 7 ( both 32 and 64 bits ),WEPOS Ready 2009.
+	Terminal Series	  : Vx (both predator and eVo ).
+
+
+
+
+
+Change history for all builds from previous ECO:
+
+
+1.0.0.37.1:
+-----------
+1. Individual installer batch file for Windows XP(32/64),Windows 7(64/32) ,WEPOS Ready 2009 is provided in this release.
+
+
+1.0.0.37:
+---------
+1. Fixed functionality issue of multi-device operations for microsoft WLK certification.
+
+1.0.0.36:
+---------
+1. Fixed functionality issue of multi-device operations.
+
+
+1.0.0.35:
+---------
+1. Enhanced to support Vx6803G terminal.
+
+
+1.0.0.34:
+---------
+
+1. Provided support for multi-device operations.
+
+The below are the instructions which needs to be followed to achieve an multi-device operations. 
+
+a. Multi device support is provided for Vx devices only (no support for Mx, PP devices yet)
+b. Multi device feature can be enabled during setup using arguement /multidev (as provided in the silent_multi.bat file). Please install using  silent_multi.bat file.
+c. Post installation this feature can be toggled using command line tool multidev.exe (from the installed "c:\program file\verifone\usb driver" directory) 
+d. If already data-exchange happening on the any of the device (when multi device mode is enabled), other device connection and disconnections should not be performed.
+e. When Multi-device mode is enabled, data resumption feature will not be supported.
+
+
+1.0.0.33:
+---------
+1. Fixes for Application Hangs when device is disconnected and application is still holding the com port.
+
+1.0.0.32:
+---------
+1.  Setup Installer changes done.
+
+
+1.0.0.31:
+---------
+1.  Changes to support for IRP_MJ_FLUSH (i.e. FileFlushBuffer API).
+
+
+1.0.0.30:
+---------
+1. Driver handles unexpected PC reboot cases. The fix in V29 did not fix all cases.  The version has all fixes.
+
+
+1.0.0.29:
+---------
+1. Driver handles unexpected reboot cases. Driver shutdown is tracked using registry entry.  If Pc is not shutdown normally, on startup, drvier 
+will clean up the previous entries.
+
+
+1.0.0.28:
+---------
+1. Enables application on terminal side to send large data size.
+
+
+1.0.0.27:
+---------
+1.  driver uses internal buffer for data read storage. If the buffer read is almost 80% full, 
+it will not place for further reads to the USB device as buffer is becoming full and wait for application to
+read the data and empty this buffer.  This functionality is bypassed to over come the 
+"USB device write freezes Vx820 terminal" problem reported.
+
+
+1.0.0.26:
+---------
+1.  VfiComTimeout function called during device disconnect scenario which caused bugcheck 0xA, is fixed.
+
+
+1.0.0.25:
+---------
+1. Debug lines to fetch the no of bytes read everytime is removed as this is suspected to cause a bug check.
+
+
+1.0.0.24:
+---------
+1. Fix for Amdocs case 120209-11473 - Vx810 USB; Win Driver;PC Application hangs when connected to Vx810 via USB
+
